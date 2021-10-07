@@ -1,14 +1,15 @@
 <?php
 
-namespace Classes;
+namespace IikoSDK\Classes;
 
 use Exception;
-use Helper\Request;
-use Model\Customer\Categories;
-use Model\Customer\Category;
-use Model\Customer\WalletBalance;
-use Model\Customer\Wallets;
-use System\Common;
+use IikoSDK\Helper\Request;
+use IikoSDK\Client;
+use IikoSDK\Model\Customer\Categories;
+use IikoSDK\Model\Customer\Category;
+use IikoSDK\Model\Customer\WalletBalance;
+use IikoSDK\Model\Customer\Wallets;
+use IikoSDK\System\Common;
 
 class Customer
 {
@@ -18,9 +19,9 @@ class Customer
     const METHOD_GET_CREATE_UPDATE = self::PATH.'create_or_update';
 
 
-    private  \Client $client;
+    private  Client $client;
 
-    public function __construct(\Client $client)
+    public function __construct(Client $client)
     {
         $this->client = $client;
 
@@ -35,7 +36,7 @@ class Customer
      * Получение объека плкупателя из результата api
      */
     private function mapping($response){
-        $customer = new \Model\Customer\Customer();
+        $customer = new \IikoSDK\Model\Customer\Customer();
         $customer->setId($response['id']);
         $customer->setEmail($response['email']);
         $customer->setName($response['name']);
@@ -85,7 +86,7 @@ class Customer
      *
      * Получить данные гостя по его номеру телефона
     */
-    public function getByPhone(string $phone): \Model\Customer\Customer
+    public function getByPhone(string $phone): \IikoSDK\Model\Customer\Customer
     {
         $request = new Request();
         $request->setType('GET');
@@ -103,7 +104,7 @@ class Customer
     /*
       * Получить данные гостя по его идентификатору
     */
-    public function getById(string $id): \Model\Customer\Customer
+    public function getById(string $id):  \IikoSDK\Model\Customer\Customer
     {
         $request = new Request();
         $request->setType('GET');
@@ -122,7 +123,7 @@ class Customer
     /*
      * Создать пользователя или обновление пользователя
     */
-    public function create_update(\Model\Customer\Customer $customer){
+    public function create_update( \IikoSDK\Model\Customer\Customer $customer){
         $data = [];
         if($customer->getId()){
             $data['id'] = $customer->getId();

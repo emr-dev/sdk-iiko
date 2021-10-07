@@ -1,12 +1,13 @@
 <?php
 
-namespace Classes;
+namespace IikoSDK\Classes;
 
 use Exception;
-use Helper\Request;
-use Model\Nomenclature\Category;
-use Model\Nomenclature\Group;
-use Model\Nomenclature\Product;
+use IikoSDK\Helper\Request;
+use IikoSDK\Client;
+use IikoSDK\Model\Nomenclature\Category;
+use IikoSDK\Model\Nomenclature\Group;
+use IikoSDK\Model\Nomenclature\Product;
 
 class Nomenclature
 {
@@ -14,10 +15,10 @@ class Nomenclature
     const PATH = 'nomenclature/';
 
 
-    private  \Client $client;
+    private  Client $client;
     private array $data;
 
-    public function __construct(\Client $client)
+    public function __construct(Client $client)
     {
         $this->client = $client;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Model\Nomenclature;
+namespace IikoSDK\Model\Nomenclature;
 
 class Group
 {

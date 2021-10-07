@@ -1,6 +1,6 @@
 <?php
 
-namespace Helper;
+namespace IikoSDK\Helper;
 
 class Request
 {

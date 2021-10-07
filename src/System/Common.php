@@ -1,8 +1,8 @@
 <?php
 
-namespace System;
+namespace IikoSDK\System;
 
-use Classes\Authorization;
+use IikoSDK\Classes\Authorization;
 
 class Common
 {

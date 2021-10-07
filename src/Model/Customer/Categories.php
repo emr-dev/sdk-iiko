@@ -1,6 +1,6 @@
 <?php
 
-namespace Model\Customer;
+namespace IikoSDK\Model\Customer;
 
 class Categories
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Model\Address;
+namespace IikoSDK\Model\Address;
 class City
 {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Model;
+namespace IikoSDK\Model;
 
 class AuthData implements \JsonSerializable
 {

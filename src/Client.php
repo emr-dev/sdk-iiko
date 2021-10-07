@@ -1,10 +1,14 @@
 <?php
 
-use Classes\Address;
-use Classes\Authorization;
-use Classes\Customer;
-use Model\AuthData;
-use System\Common;
+namespace IikoSDK;
+
+use IikoSDK\Classes\Address;
+use IikoSDK\Classes\Authorization;
+use IikoSDK\Classes\Customer;
+use IikoSDK\Classes\Nomenclature;
+use IikoSDK\Classes\Organization;
+use IikoSDK\Model\AuthData;
+use IikoSDK\System\Common;
 
 class Client extends Common
 {
@@ -34,21 +38,20 @@ class Client extends Common
 
 
     /**
-     * @return \Classes\Organization|organization
-     * @throws Exception
+     * @return  Organization|organization
+     * @throws \Exception
      */
     public function organization()
     {
-        return  new \Classes\Organization($this);
+        return  new Organization($this);
     }
 
     /**
-     * @return \Classes\Nomenclature
-     * @throws Exception
+     * @return  Nomenclature
      */
     public function nomenclature()
     {
-        return  new \Classes\Nomenclature($this);
+        return  new  Nomenclature($this);
     }
 
 }

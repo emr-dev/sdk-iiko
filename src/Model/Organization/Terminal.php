@@ -1,6 +1,6 @@
 <?php
 
-namespace Model\Organization;
+namespace IikoSDK\Model\Organization;
 
 
 class Terminal

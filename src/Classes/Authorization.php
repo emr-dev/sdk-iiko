@@ -1,10 +1,10 @@
 <?php
 
-namespace Classes;
+namespace IikoSDK\Classes;
 
 use Exception;
-use Helper\Request;
-use Model\AuthData;
+use IikoSDK\Helper\Request;
+use IikoSDK\Model\AuthData;
 
 class Authorization
 {

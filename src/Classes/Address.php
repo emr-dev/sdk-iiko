@@ -1,11 +1,12 @@
 <?php
 
-namespace Classes;
+namespace IikoSDK\Classes;
 
 use Exception;
-use Helper\Request;
-use Model\Address\City;
-use Model\Address\Street;
+use IikoSDK\Client;
+use IikoSDK\Helper\Request;
+use IikoSDK\Model\Address\City;
+use IikoSDK\Model\Address\Street;
 
 class Address
 {
@@ -16,9 +17,9 @@ class Address
     const METHOD_GET_ADDRESS_BOOK_ORGANIZATION = self::PATH.'citiesList';
 
 
-    private  \Client $client;
+    private  Client $client;
 
-    public function __construct(\Client $client)
+    public function __construct(Client $client)
     {
         $this->client = $client;
 

@@ -1,12 +1,13 @@
 <?php
 
-namespace Classes;
+namespace IikoSDK\Classes;
 
 use Exception;
-use Helper\Request;
-use Model\Organization\Coordinate;
-use Model\Organization\Restriction;
-use Model\Organization\Terminal;
+use IikoSDK\Helper\Request;
+use IikoSDK\Client;
+use IikoSDK\Model\Organization\Coordinate;
+use IikoSDK\Model\Organization\Restriction;
+use IikoSDK\Model\Organization\Terminal;
 
 class Organization
 {
@@ -15,9 +16,9 @@ class Organization
     const METHOD_GET_DELIVERY_RESTRICTIONS = 'deliverySettings/getDeliveryRestrictions';
 
 
-    private  \Client $client;
+    private  Client $client;
 
-    public function __construct(\Client $client)
+    public function __construct(Client $client)
     {
         $this->client = $client;
 
